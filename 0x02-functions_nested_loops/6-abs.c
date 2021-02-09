@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * _abs - Computes the absolute value of an integer
- * @int: Integer
- * Return: 0
+ * @n: Integer
+ * Return: n
  */
 int _abs(int n)
 {
