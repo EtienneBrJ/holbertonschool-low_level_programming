@@ -1,4 +1,4 @@
-#include "holberton.h"
+ #include "holberton.h"
 
 /**
  * print_times_table - Print times table for 0 to 15 included
@@ -11,7 +11,7 @@ void print_times_table(int n)
 
 	k = 0;
 
-	if (n >= 0 && n <= 15)
+	if (n >= 0 && n < 16)
 	{
 		for (i = 0; i <= n; i++)
 		{
