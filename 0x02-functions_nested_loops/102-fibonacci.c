@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int long a, b ,c;
+	int long a, b, c;
 	int i;
 
 	a = 1;
@@ -17,6 +17,10 @@ int main(void)
 		printf("%lu, ", c);
 		a = b;
 		b = c;
+		if (i == 49)
+		{
+			printf("%lu", c);
+		}
 	}
 	printf("\n");
 	return (0);
