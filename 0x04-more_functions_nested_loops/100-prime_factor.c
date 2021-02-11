@@ -7,7 +7,7 @@ int main(void)
 {
 	int count;
 
-	int long num;
+	long int num;
 
 	num = 612852475143;
 
