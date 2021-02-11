@@ -6,6 +6,7 @@
 int main(void)
 {
 	int count;
+
 	int long num;
 
 	num = 612852475143;
