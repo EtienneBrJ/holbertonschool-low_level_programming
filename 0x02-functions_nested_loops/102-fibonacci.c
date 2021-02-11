@@ -11,6 +11,7 @@ int main(void)
 
 	a = 1;
 	b = 2;
+	printf("%lu, %lu, ", a, b);
 	for (i = 0; i < 50; i++)
 	{
 		if (i == 49)
