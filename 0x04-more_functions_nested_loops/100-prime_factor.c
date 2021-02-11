@@ -18,6 +18,6 @@ int main(void)
 			num = num / count;
 		}
 	}
-	printf("%d\n", count);
+	printf("%d\n", count - 1);
 	return (0);
 }
