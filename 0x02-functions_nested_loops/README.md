@@ -1,3 +1,3 @@
 FUNCTIONS AND NESTED LOOPS
 ---
-BLA
+Understanding functions and nested loops.
