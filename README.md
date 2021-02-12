@@ -1,2 +1,1 @@
-#CISFUN
-This repositary contains C projects.
+This repositary contains C projects. #CISFUN
