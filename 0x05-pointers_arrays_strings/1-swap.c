@@ -6,9 +6,9 @@
  */
 void swap_int(int *a, int *b)
 {
-  int temporaire = 0;
+int temporaire = 0;
 
-  temporaire = *a;
-  *a = *b;
-  *b = temporaire;
+temporaire = *a;
+*a = *b;
+*b = temporaire;
 }
