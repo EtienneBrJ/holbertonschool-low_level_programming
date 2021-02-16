@@ -5,11 +5,11 @@
  */
 void puts_half(char *str)
 {
-	int i, l;
+	int l = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[l])
 	{
-		l = i + 1; /*At the end of the loop, l takes i max*/
+		l++;
 	}
 	if (l % 2 == 0)
 	{
