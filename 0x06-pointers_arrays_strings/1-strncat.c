@@ -7,7 +7,7 @@
  * @n: bytes
  * Return: @dest
  */
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
 	int lenght = 0;
 	int i;
