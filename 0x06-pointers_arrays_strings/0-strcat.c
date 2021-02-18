@@ -3,6 +3,7 @@
  * _strcat - concatenates two strings
  * @src: add this chain of characters to the string dest, overwriting the
  * terminating null byte (\0) at the end of the dest
+ * @dest : result string
  * Return: @dest
  */
 char *_strcat(char *dest, char *src)
