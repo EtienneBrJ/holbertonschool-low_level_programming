@@ -18,5 +18,10 @@ char *_strpbrk(char *s, char *accept)
 				r = &s[i];
 		}
 	}
-	return (r);
+	if (r == 0)
+	{
+		return (0);
+	}
+	else
+		return (r);
 }
