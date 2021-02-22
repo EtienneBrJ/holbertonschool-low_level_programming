@@ -24,6 +24,6 @@ char *_strchr(char *s, char c)
 	}
 	else
 	{
-	       	return ((char *)s2 - 1);
+		return ((char *)s2 - 1);
 	}
 }
