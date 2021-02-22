@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stddef.h>
 /**
  * _strpbrk - search a string for any of a set of bytes
  * @s: string to find occurence
@@ -20,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 	}
 	if (r == 0)
 	{
-		return (0);
+		return (NULL);
 	}
 	else
 		return (r);
