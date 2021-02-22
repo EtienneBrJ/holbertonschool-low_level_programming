@@ -19,5 +19,10 @@ char *_strstr(char *haystack, char *needle)
 			break;
 		}
 	}
-	return (p);
+	if (p == 0)
+	{
+		return (0);
+	}
+	else
+		return (p);
 }
