@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stddef.h>
 /**
  * _strstr - locates a substring
  * @haystack: string
@@ -18,6 +19,7 @@ char *_strstr(char *haystack, char *needle)
 			p = &haystack[i];
 			break;
 		}
+		return (p);
 	}
-	return (p);
+	return (NULL);
 }
