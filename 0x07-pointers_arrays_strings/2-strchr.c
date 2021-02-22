@@ -17,6 +17,9 @@ char *_strchr(char *s, char c)
 		{
 			s2 = &s[i];
 		}
+		else
+		{
+			return (0);
 	}
 	return ((char *)s2 - 1);
 }
