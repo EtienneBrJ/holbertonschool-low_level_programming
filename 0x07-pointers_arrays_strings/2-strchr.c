@@ -17,9 +17,13 @@ char *_strchr(char *s, char c)
 		{
 			s2 = &s[i];
 		}
-		else
-		{
-			return (0);
 	}
-	return ((char *)s2 - 1);
+	if (s2 == 0)
+	{
+		return (0);
+	}
+	else
+	{
+	       	return ((char *)s2 - 1);
+	}
 }
