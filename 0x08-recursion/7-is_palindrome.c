@@ -20,10 +20,8 @@ int is_palindrome(char *s)
 
 int check(char *s, int i)
 {
-	int len = _strlen(s) - 1;
+	int len = _strlen(s) - (i + 1);
 
-	if (s[0] == '\0')
-		return (0);
   	if (s[i] == s[len])
 		return (1);
 	else
