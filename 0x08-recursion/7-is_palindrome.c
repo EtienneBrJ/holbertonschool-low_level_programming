@@ -22,7 +22,7 @@ int check(char *s, int i)
 {
 	int len = _strlen(s) - 1;
 
-	if (s[i] == s[len] || (s[i] == '\0' && s[len] == '\0'))
+	if (s[i] == s[len])
 		return (1);
 	else
 		return (0);
@@ -37,6 +37,6 @@ int check(char *s, int i)
 int _strlen(char *s)
 {
 	if (*s == '\0')
-		return (0);
+		return (1);
 	return (1 + _strlen(s + 1));
 }
