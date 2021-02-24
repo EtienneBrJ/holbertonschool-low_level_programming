@@ -7,6 +7,8 @@
 
 int _sqrt_recursion(int n)
 {
+	if (n < 0)
+		return (-1);
 	return (_guess_sqrt(n, 1, n));
 }
 
