@@ -16,7 +16,8 @@ int is_palindrome(char *s)
 /**
  * check - check if the string is a palindrome
  * @s: string to check
- * @i: index
+ * @min: index
+ * @max: index max
  * Return: 1 if the string is a palindrome and 0 if not.
  */
 
@@ -25,7 +26,7 @@ int check(char *s, int min, int max)
 	if (s[min] != s[max])
 		return (0);
 
-	if (min <= max && s[min] == s[max])
+	if (min <= max)
 		return (1);
 	else
 		return (check(s, min + 1, max - 1));
