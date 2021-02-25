@@ -26,7 +26,7 @@ int check(char *s, int min, int max)
 	if (s[min] != s[max])
 		return (0);
 
-	if (min <= max)
+	if (min >= max)
 		return (1);
 	else
 		return (check(s, min + 1, max - 1));
