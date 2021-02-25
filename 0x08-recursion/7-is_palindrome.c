@@ -10,7 +10,7 @@ int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (1);
-	return (check(s, 0));
+	return (check(s, 0, (_strlen(s) - 1)));
 }
 
 /**
@@ -20,14 +20,14 @@ int is_palindrome(char *s)
  * Return: 1 if the string is a palindrome and 0 if not.
  */
 
-int check(char *s, int i)
+int check(char *s, int min, int max)
 {
-	int len = _strlen(s) - 1;
-
-	if (s[i] == s[len])
+	if (min < max)
 		return (1);
-	else
+	if (s[min] != s[max])
 		return (0);
+	else
+		return (check(s, min + 1; max - 1));
 }
 
 /**
