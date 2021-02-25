@@ -22,7 +22,7 @@ int is_palindrome(char *s)
 
 int check(char *s, int min, int max)
 {
-	if (min <= max)
+	if (min <= max && s[min] == s[max])
 		return (1);
 	if (s[min] != s[max])
 		return (0);
