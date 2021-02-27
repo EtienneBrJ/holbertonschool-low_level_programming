@@ -6,7 +6,6 @@
 * @argv: array stocking parameters
 * Return: 0
 **/
-
 int main(int argc, char **argv)
 {
 	argc = 0;
