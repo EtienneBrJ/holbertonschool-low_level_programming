@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 
 	if (argc < 1)
 		return (0);
-	while (i < argc)
+	for (i = 1; i < argc, i++)
 	{
 		if (!_atoi(argv[i]))
 		{
@@ -57,7 +57,6 @@ int main(int argc, char **argv)
 			return (1);
 		}
 		result += _atoi(argv[i]);
-		i++;
 	}
 	printf("%d\n", result);
 	return (0);
