@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 int _atoi(char *s);
 /**
  * _atoi - convert string to int
@@ -46,17 +45,16 @@ int _atoi(char *s)
 int main(int argc, char **argv)
 {
 	int result = 0;
-	int i = 0;
+	int i = 1;
 
+	if (argc =< 1)
+		printf("0\n");
 	while (i < argc)
 	{
-		if (i > 0)
+		if (!_atoi(argv[i]))
 		{
-			if (!_atoi(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
 		result += _atoi(argv[i]);
 		i++;
