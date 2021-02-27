@@ -47,14 +47,15 @@ int main(int argc, char **argv)
 	int result = 0;
 	int i = 1;
 
-	if (argc < 1)
+	if (argc < 2)
+	{
 		return (0);
-
+	}
 	for (i = 1; i < argc; i++)
 	{
 		if (!_atoi(argv[i]))
 		{
-			printf("%s\n", "Error");
+			printf("Error\n");
 			return (1);
 		}
 		result += _atoi(argv[i]);
