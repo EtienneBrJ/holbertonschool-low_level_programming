@@ -49,11 +49,12 @@ int main(int argc, char **argv)
 
 	if (argc < 1)
 		return (0);
+
 	for (i = 1; i < argc; i++)
 	{
 		if (!_atoi(argv[i]))
 		{
-			printf("Error\n");
+			puts("Error");
 			return (1);
 		}
 		result += _atoi(argv[i]);
