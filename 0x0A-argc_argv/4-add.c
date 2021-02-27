@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 	int result = 0;
 	int i = 1;
 
-	if (argc < 2)
+	if (argc < 1)
 	{
 		return (0);
 	}
