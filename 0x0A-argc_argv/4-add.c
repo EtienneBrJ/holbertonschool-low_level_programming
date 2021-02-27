@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 	{
 		if (!_atoi(argv[i]))
 		{
-			puts("Error");
+			printf("%s\n", "Error");
 			return (1);
 		}
 		result += _atoi(argv[i]);
