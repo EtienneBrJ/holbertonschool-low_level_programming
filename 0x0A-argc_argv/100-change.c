@@ -22,10 +22,7 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	else if (arg1 >= 0)
-	{
-		checkcoin(arg1, 0);
-	}
+	checkcoin(arg1, 0);
 	return (0);
 }
 /**
