@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
  * alloc_grid - returns a pointer to a 2D array of integers
  * @width: width of the 2D array
@@ -16,13 +15,12 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	p = malloc(sizeof(int *) * width); /* Allocate memory for width/rox */
-
+	p = (int **) malloc(sizeof(int *) * width);/*Allocate memory for width*/
 	if (p == NULL)
 		return (NULL);
 	for (iWidth = 0; iWidth < width; iWidth++) /*Allocate memory for h/col*/
 	{
-		p[iWidth] = malloc(sizeof(int) * height);
+		p[iWidth] = (int *) malloc(sizeof(int) * height);
 		if (p[iWidth] == NULL)
 		{
 			free(p);
