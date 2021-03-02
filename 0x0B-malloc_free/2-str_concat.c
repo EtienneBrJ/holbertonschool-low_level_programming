@@ -29,20 +29,23 @@ char *str_concat(char *s1, char *s2)
 
 	if (p == NULL)
 		return (NULL);
-
-	for (i = 0; i < lens1; i++)
+	if (s1 != NULL)
 	{
-		p[i] = s1[i];
+		for (i = 0; i < lens1; i++)
+		{
+			p[i] = s1[i];
+		}
 	}
-
-	j = 0;
-	while (i < lens1 + lens2)
+	if (s2 != NULL)
 	{
-		p[i] = s2[j];
-		i++;
-		j++;
+		j = 0;
+		while (i < lens1 + lens2)
+		{
+			p[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
-
 	p[i] = '\0';
 	return (p);
 }
