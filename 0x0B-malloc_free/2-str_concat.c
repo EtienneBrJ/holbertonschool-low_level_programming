@@ -29,23 +29,16 @@ char *str_concat(char *s1, char *s2)
 
 	if (p == NULL)
 		return (NULL);
-	if (s1)
+	for (i = 0; i < lens1; i++)
 	{
-		for (i = 0; i < lens1; i++)
-		{
-			p[i] = s1[i];
-		}
+		p[i] = s1[i];
 	}
-	if (s2)
+	j = 0;
+	while (i < lens1 + lens2)
 	{
-		i = 0;
-		j = 0;
-		while (i < lens1 + lens2)
-		{
-			p[i] = s2[j];
-			i++;
-			j++;
-		}
+		p[i] = s2[j];
+		i++;
+		j++;
 	}
 	p[i] = '\0';
 	return (p);
