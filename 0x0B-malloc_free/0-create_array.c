@@ -17,10 +17,10 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	p = (char *) malloc(sizeof(char) * 98);
+	p = malloc(sizeof(char) * size);
 	if (p == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	for (i = 0; i < size; i++)
 	{
