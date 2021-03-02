@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
  * alloc_grid - returns a pointer to a 2D array of integers
  * @width: width of the 2D array
@@ -15,28 +16,28 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	p = malloc(sizeof(int *) * height);/*Allocate memory for row*/
+	p = (int **) malloc(sizeof(int *) * width); /* Allocate memory for width/rox */
+
 	if (p == NULL)
 		return (NULL);
-
-	for (iHeight = 0; iHeight < height; iHeight++)/*Allocate memory for co*/
+	for (iWidth = 0; iWidth < width; iWidth++) /*Allocate memory for h/col*/
 	{
-		p[iHeight] = malloc(sizeof(int) * width);
-		if (p[iHeight] == NULL)
+		p[iWidth] = (int *) malloc(sizeof(int) * height);
+		if (p[iWidth] == NULL)
 		{
-			for (i = 0; i <= iHeight; i++)
-			{
-				free(p[iHeight]);
-			}
 			free(p);
+			for (i = 0; i <= iWidth; i++)
+			{
+				free(p[iWidth]);
+			}
 			return (NULL);
 		}
 	}
-	for (iHeight = 0; iHeight < height; iHeight++)
+	for (iWidth = 0; iWidth < width; iWidth++)
 	{                                          /*Copy the date in 2D array*/
-		for (iWidth = 0; iWidth < width; iWidth++)
+		for (iHeight = 0; iHeight < height; iHeight++)
 		{
-			p[iHeight][iWidth] = 0;
+			p[iWidth][iHeight] = 0;
 		}
 	}
 	return (p);
