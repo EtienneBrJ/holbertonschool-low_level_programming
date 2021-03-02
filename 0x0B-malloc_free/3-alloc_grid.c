@@ -15,28 +15,28 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	p = malloc(sizeof(int *) * width);/*Allocate memory for width*/
+	p = malloc(sizeof(int *) * height);/*Allocate memory for width*/
 	if (p == NULL)
 		return (NULL);
 
-	for (iWidth = 0; iWidth < width; iWidth++) /*Allocate memory for h/col*/
+	for (iHeight = 0; iHeight < height; iHeight++) /*Allocate memory for h/col*/
 	{
-		p[iWidth] = malloc(sizeof(int) * height);
-		if (p[iWidth] == NULL)
+		p[iHeight] = malloc(sizeof(int) * width);
+		if (p[iHeight] == NULL)
 		{
-			for (i = 0; i <= iWidth; i++)
+			for (i = 0; i <= iHeight; i++)
 			{
-				free(p[iWidth]);
+				free(p[iHeight]);
 			}
 			free(p);
 			return (NULL);
 		}
 	}
-	for (iWidth = 0; iWidth < width; iWidth++)
+	for (iHeight = 0; iHeight < height; iHeight++)
 	{                                          /*Copy the date in 2D array*/
-		for (iHeight = 0; iHeight < height; iHeight++)
+		for (iWidth = 0; iWidth < width; iWidth++)
 		{
-			p[iWidth][iHeight] = 0;
+			p[iHeight][iWidth] = 0;
 		}
 	}
 	return (p);
