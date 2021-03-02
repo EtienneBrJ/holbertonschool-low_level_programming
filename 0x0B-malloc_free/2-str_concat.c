@@ -38,6 +38,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 != NULL)
 	{
+		i = 0;
 		j = 0;
 		while (i < lens1 + lens2)
 		{
