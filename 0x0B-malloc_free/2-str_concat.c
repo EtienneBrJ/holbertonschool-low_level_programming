@@ -14,13 +14,13 @@ char *str_concat(char *s1, char *s2)
 	unsigned int lens1, lens2, i, j;
 
 	lens1 = 0;
-	while (s1[lens1] != '\0')
+	while (s1 && s1[lens1] != '\0')
 	{
 		lens1++;
 	}
 
 	lens2 = 0;
-	while (s2[lens2] != '\0')
+	while (s2 && s2[lens2] != '\0')
 	{
 		lens2++;
 	}
