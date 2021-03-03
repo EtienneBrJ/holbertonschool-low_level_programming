@@ -71,9 +71,6 @@ char *argstostr(int ac, char **av)
 		_strcat(s, av[i]);
 		_strcat(s, "\n");
 	}
-	/**	i = 0; **/
-/**	while (s[i] != '\0')
-		i++;
-**/	s[lenght + 1 + ac] = '\0';
+      	s[lenght + 1 + ac] = '\0';
 	return (s);
 }
