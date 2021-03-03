@@ -9,6 +9,10 @@
  **/
 char **strtow(char *str)
 {
+	char **tab;
+
 	if (str == NULL || str == "")
 		return (NULL);
+
+	return (tab);
 }
