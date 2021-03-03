@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 int _atoi(char *s);
 /**
  * _atoi - convert string to int
