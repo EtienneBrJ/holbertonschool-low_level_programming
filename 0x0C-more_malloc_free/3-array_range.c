@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -12,17 +11,17 @@
 int *array_range(int min, int max)
 {
 	int *a;
-	int i;
+	int i = 0;
 
 	if (min > max)
 		return (NULL);
 
-	a = malloc(max - (min + 1) * sizeof(int));
+	a = malloc((max - min + 1) * sizeof(int));
 	if (!a)
 		return (NULL);
 
-	for (i = 0; min <= max; i++)
-		a[i] = min++;
+	while (min <= max)
+		a[i++] = min++;
 
 	return (a);
 }
