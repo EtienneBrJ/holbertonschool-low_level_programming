@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 			j++;
 		}
-		s[lens1 + lens2 + 1] = '\0';
+		s[i] = '\0';
 	}
 	else
 	{
@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 			j++;
 		}
-		s[lens1 + n + 1] = '\0';
+		s[i] = '\0';
 	}
 	return (s);
 }
