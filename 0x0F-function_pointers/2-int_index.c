@@ -6,8 +6,8 @@
  * @array: array
  * @size: size
  * @cmp: pointer tu function
- * Return: returns the index of the first element for wich cmp fonction does not
- * return 0
+ * Return: returns the index of the first element for wich cmp fonction does
+ * not return 0
  **/
 
 int int_index(int *array, int size, int (*cmp)(int))
