@@ -22,6 +22,11 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(99);
 	}
+	if (strlen(av[2]) != 1)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	function = get_op_func(av[2]);
 
 	res = function(num1, num2);
