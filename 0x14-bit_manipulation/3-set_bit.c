@@ -9,6 +9,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	int ch_val;
 
-	ch_val = n & ~(1 << index);
+	ch_val |= 1 << index;
 	return (ch_val);
 }
