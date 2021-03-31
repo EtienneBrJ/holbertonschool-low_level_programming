@@ -48,13 +48,14 @@ int main(int ac, char **av)
 			exit(98);
 		}
 	}
-	c1 = close(fd);
-	c2 = close(fdw);
-	if (c1 == -1 || c2 == -1)
+	c = close(fd);
+	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdw);
 		exit(100);
 	}
+	return (0);
+	c = close(fdw);
 	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdw);
