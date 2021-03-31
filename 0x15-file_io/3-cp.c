@@ -55,8 +55,10 @@ int main(int argc, char *argv[])
 	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 		f_exit(99, argv, 0);
-
-	while ((r = read(fd, buf, 1024)) > 0)
+	r = read(fd, buf, 1024);
+	if (r == -1)
+		f_exit(98, argv, 0);
+	while (r > 0)
 	{
 		w = write(fdw, buf, r);
 		if (w == -1)
