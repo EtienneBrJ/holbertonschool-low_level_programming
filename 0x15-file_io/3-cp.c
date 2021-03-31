@@ -40,17 +40,17 @@ void f_exit(int error, char *argv[], int fd)
  * @argv: double pointer of arguments
  * Return: int
  */
-int main(int ac, char *argv[])
+int main(int argc, char *argv[])
 {
 	char buf[1024];
 	int fd, fdw, r, w, c1, c2;
 
-	if (ac != 3)
+	if (argc != 3)
 		f_exit(97, argv, 0);
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		f_exit(98, argv, 0);
-	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 00664);
+	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 		f_exit(99, argv, 0);
 	r = read(fd, buf, 1024);
