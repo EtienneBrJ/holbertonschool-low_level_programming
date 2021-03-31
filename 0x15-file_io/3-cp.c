@@ -65,11 +65,11 @@ int main(int ac, char *argv[])
 		if (r == -1)
 			f_exit(98, argv, 0);
 	}
-	c = close(fd);
-	if (c == -1)
+	c1 = close(fd);
+	if (c1 == -1)
 		f_exit(100, argv, fd);
-	c = close(fdw);
-	if (c == -1)
+	c2 = close(fdw);
+	if (c2 == -1)
 		f_exit(100, argv, fdw);
 	return (0);
 }
