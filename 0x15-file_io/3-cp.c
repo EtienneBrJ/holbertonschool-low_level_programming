@@ -43,7 +43,7 @@ void f_exit(int error, char *argv[], int fd)
 int main(int ac, char *argv[])
 {
 	char buf[1024];
-	int fd, fdw, r, w, c;
+	int fd, fdw, r, w, c1, c2;
 
 	if (ac != 3)
 		f_exit(97, argv, 0);
