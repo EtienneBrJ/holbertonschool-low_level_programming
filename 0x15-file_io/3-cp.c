@@ -36,7 +36,7 @@ void f_exit(int error, char *argv[], int fd)
 
 /**
  * main - copies the content of a file to another file
- * @ac: nb of arguments
+ * @argc: nb of arguments
  * @argv: double pointer of arguments
  * Return: int
  */
@@ -47,15 +47,15 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		f_exit(97, argv, 0);
+
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		f_exit(98, argv, 0);
+
 	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 		f_exit(99, argv, 0);
-	r = read(fd, buf, 1024);
-	if (r == -1)
-		f_exit(98, argv, 0);
+
 	while ((r = read(fd, buf, 1024)) > 0)
 	{
 		w = write(fdw, buf, r);
@@ -65,11 +65,14 @@ int main(int argc, char *argv[])
 		if (r == -1)
 			f_exit(98, argv, 0);
 	}
+
 	c1 = close(fd);
 	if (c1 == -1)
 		f_exit(100, argv, fd);
+
 	c2 = close(fdw);
 	if (c2 == -1)
 		f_exit(100, argv, fdw);
+
 	return (0);
 }
