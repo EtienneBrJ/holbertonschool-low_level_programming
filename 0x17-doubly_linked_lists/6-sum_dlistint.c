@@ -1,3 +1,4 @@
+
 #include "lists.h"
 /**
  *sum_dlistint - Returns the sum of all the data (n) of a listint_t linked list
@@ -18,3 +19,4 @@ int sum_dlistint(dlistint_t *head)
 	}
 	return (sum);
 }
+
