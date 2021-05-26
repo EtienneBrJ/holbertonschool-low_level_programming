@@ -1,1 +1,3 @@
-This repositary contains C projects. #CISFUN
+#CISFUN
+---
+2 months of C in a repositary
