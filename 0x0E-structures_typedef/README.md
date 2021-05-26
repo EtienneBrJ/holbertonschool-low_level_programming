@@ -1,5 +1,5 @@
 Structures, typedef
-
+---
 File 0 - new type struct dog (.h)
 File 1 - function that initialize a variable of type struct dog
 File 2 - function that prints a struct dog

@@ -1,1 +1,3 @@
-0x13-more_singly_linked_lists
+More linked lists
+---
+This folder contains project about linked lists.
