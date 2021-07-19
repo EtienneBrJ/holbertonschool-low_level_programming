@@ -44,6 +44,44 @@ int binary_tree_is_leaf(const binary_tree_t *node);
 /* Check if a node is a root */
 int binary_tree_is_root(const binary_tree_t *node);
 
+/* Goes through a binary tree using pre-order traversal*/
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+
+/* Goes through a binary tree using in-order traversal */
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
+
+/* Goes through a binary tree using post-order traversal */
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+
+/* Measures the height of a binary tree */
+size_t binary_tree_height(const binary_tree_t *tree);
+
+/* Measures the depth of a binary tree */
+size_t binary_tree_depth(const binary_tree_t *tree);
+
+/* Measures the size of a binary tree */
+size_t binary_tree_size(const binary_tree_t *tree);
+
+/* Count the leaves in a binary tree */
+size_t binary_tree_leaves(const binary_tree_t *tree);
+
+/* Counts the node with at least 1 child in a binary tree */
+size_t binary_tree_nodes(const binary_tree_t *tree);
+
+/* Measures the balance factor of a binary tree */
+int binary_tree_balance(const binary_tree_t *tree);
+
+/* Checks if a binary tree is full */
+int binary_tree_is_full(const binary_tree_t *tree);
+
+/* Check if a binatry tree is perfect */
+int binary_tree_is_perfect(const binary_tree_t *tree);
+
+/* Finds the sibling of a node */
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
+/* Finds the uncle of a node */
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 
 
