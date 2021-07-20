@@ -8,45 +8,36 @@
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	return is_perfect(tree, binary_tree_depth(tree), 0);
-}
-
-/**
- * is_perfect - Check if a binatry tree is perfectl
- * 
- * @tree: binary tree
- * @depth: depth of the tree
- * @level: level of the tree
- */
-
-int is_perfect(const binary_tree_t *tree, int depth, int level)
-{
 	if (!tree)
-		return (0);
+		return 0;
 
 	if (!tree->left && !tree->right)
-		return (depth == level + 1);
+		return 1;
 
 	if (!tree->left || !tree->right)
-		return (0);
+		return 0;
 
-	return (is_perfect(tree->left, depth,  level + 1) &&
-			is_perfect(tree->right, depth,  level + 1));
+	if (binary_tree_height(tree->left) != binary_tree_height(tree->right))
+		return 0;
+
+	return (binary_tree_is_perfect(tree->left) && binary_tree_is_perfect(tree->right));
 }
 
 /**
- * binary_tree_depth - Measures the depth of a binary tree
+ * binary_tree_height - Measures the height of a binary tree
  * 
  * @tree: tree
  */
 
-size_t binary_tree_depth(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-    int depth = 0;
+    size_t height_l;
+	size_t height_r;
 
-    if (!tree)
-        return 0;
-        
-    for (; tree->parent; tree = tree->parent, depth++);
-    return (depth);
+	if (!tree)
+    	return 0;
+
+	height_l = tree->left ? 1 + binary_tree_height(tree->left) : 0;
+	height_r = tree->right ? 1 + binary_tree_height(tree->right) : 0;
+	return (height_l > height_r ? height_l : height_r);
 }
