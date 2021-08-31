@@ -38,7 +38,6 @@ int binary_search(int *array, size_t size, int value)
 	{
 		print_array(array, l, h);
 		mid = (l + h) / 2;
-		printf("%ld\n", mid);
 		if (array[mid] < value)
 			l = mid + 1;
 		else if (array[mid] > value)
